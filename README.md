@@ -161,7 +161,7 @@ This is a real scenario we hit while testing on March 18, 2026:
 - `aws:cloudformation:stack-name`, `aws:cloudformation:logical-id`, and `aws:cloudformation:stack-id` were all `Active`
 - a backfill from `2026-02-01T00:00:00Z` had already `SUCCEEDED`
 - Cost Explorer still returned almost all current-month spend under the blank tag value
-- only tiny amounts were attributed to `dovewing-ts-dev-frontend` and `dovewing-ts-prod-frontend`
+- only tiny amounts were attributed to a small number of stack-tagged frontend resources
 
 In other words, enabling the tags and running backfill helped the account become eligible for stack attribution, but it still did not make every billed service map cleanly to a CloudFormation stack.
 
